@@ -1,0 +1,145 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up</title>
+
+    <style>
+        body{
+            display: flex;
+            margin: 0;
+        }
+
+        .left-panel {
+            background-color: #3a4a5e;
+            color: white;
+            padding: 40px;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .right-panel {
+            background-color: #f4f4f4;
+            padding: 40px;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #3a4a5e;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .signup-box label {
+            display: block;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .signup-box input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .signup-box button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #3a4a5e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .signup-box button:hover {
+            background-color: #2e3d4f;
+        }
+
+        .login-box button {
+            padding: 10px;
+            margin-top: 20px;
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .login-box button:hover {
+            background-color: rgb(157, 210, 231);
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="left-panel">
+        <h1>Selamat Datang di FreshPortal</h1>
+        <p>Selamat datang di portal eksklusif kami yang diperuntukkan bagi pelanggan. Anda perlu melakukan login terlebih dahulu untuk mengakses informasi layanan,
+            rincian akun, dan data penting lainnya.</p>
+        <p>Jika anda sudah mempunyai akun, silahkan lakukan Log-in.</p>
+
+        <a href="Log-In.html" style="text-decoration: none;" class="login-box">
+            <button class="Log-In">Log-In</button>
+        </a>
+    </div>
+
+    <div class="right-panel">
+        <div>
+            <a href="index.html" style="text-decoration: none;">
+                <button class="back-button">Back</button>
+            </a>
+        </div>
+        
+        <div class="signup-box">
+            <label for="fname">*First Name</label>
+            <input type="text" id="fname" name="fname" required>
+                
+            <label for="lname">*Last Name</label>
+            <input type="text" id="lname" name="lname" required>
+
+            <label for="email">*Email</label>
+            <input type="email" id="email" name="email" required>
+                
+            <label for="password">*No. Telp</label>
+            <input type="text" id="telp" name="telp" required>
+                
+            <label for="password">*Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="cpassword">*Confirm Password</label>
+            <input type="password" id="cpassword" name="cpassword" required>
+             
+            <a href="profile.html" style="text-decoration: none;">
+                <button type="submit">Register</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

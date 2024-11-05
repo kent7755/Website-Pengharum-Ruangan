@@ -1,0 +1,157 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komposisi</title>
+
+    <style>
+        body{
+            background-image: url("image/background-image.png");
+            background-size: 100%;
+            margin: 0%;
+        }
+
+        .bar{
+            display: flex;
+        }
+
+        .judul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: -10px;
+            font-size: 50px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 60px;
+        }
+
+        li {
+        float: left;
+        }
+
+        li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+        background-color: #111;
+        }
+
+        form {
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 30px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .isi {
+            padding-left: 200px;
+            padding-right: 200px;
+            margin-top: 0px;
+            margin-left: 150px;
+            margin-right: 150px;
+            margin-top: 100px;
+            border-radius: 10px;
+            background-color: white;
+            opacity: 70%;
+        }
+
+        .button {
+            top: 20px;
+            right: 20px;
+            background-color: #3a4a5e;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: white;
+            color: #3a4a5e;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="aboutUs.html">About Us</a></li>
+
+        <form>
+            <div>
+                <div>
+                    <input type="text" placeholder="Search" name="search">
+                </div>
+                
+                <div style="margin-top: 10px;">
+                    <a href="Sign-Up.html" style="text-decoration: none;">
+                        <button type="button" style="width: 48.85%;">Sign-Up</button>
+                    </a>
+                    <a href="Log-In.html" style="text-decoration: none;">
+                        <button type="button" style="width: 48.85%;">Log-In</button>
+                    </a>
+                </div>
+            </div>
+        </form>
+    </ul>
+    
+    <div class="bar">
+        <div style="width: 200px; align-content: center;">
+            <img src="image/logo.png" alt="logo" style="width: 150px; height: 150px;">
+        </div>
+        <div class="judul">
+            <h1>Komposisi</h1>
+        </div>
+        <div style="display: flex; width: 200px; margin-top: 75px; justify-content: center;">
+            <a href="product.html" style="text-decoration: none;">
+                <button class="button" type="button">Back</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="isi">
+        <h2>Menciptakan Aroma yang Menyegarkan</h2>
+        <p>
+            Propane dan Butane adalah dua senyawa gas yang sering digunakan sebagai bahan bakar. Namun, dalam dunia pengharum ruangan, 
+            keduanya berperan sebagai propelan yang membantu menyebarkan wangi. Ketika campuran ini dihaluskan dengan baik, 
+            mereka menciptakan kabut halus yang membuat aroma menyebar merata ke seluruh ruangan. <br> <br>
+
+            Ethanol merupakan komponen penting lainnya, yang berfungsi sebagai pelarut. Sebagai zat yang mudah menguap, 
+            ethanol tidak hanya mempercepat proses penguapan aroma, tetapi juga membantu menjaga kestabilan komposisi. 
+            Kombinasi ketiga komponen ini, ditambah dengan fragrance yang dipilih dengan cermat, 
+            menciptakan pengalaman yang menyenangkan bagi indera penciuman kita. <br> <br>
+
+            Dengan menciptakan harmoni antara propane, butane, dan ethanol, pengharum ruangan dapat menghadirkan nuansa yang berbeda, 
+            mulai dari kesegaran citrus hingga aroma bunga yang menenangkan. 
+            Setiap semprotan adalah undangan untuk merasakan ketenangan dan kebahagiaan di setiap sudut rumah Anda.
+        </p>
+    </div>
+</body>
+</html>
