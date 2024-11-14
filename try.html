@@ -1,0 +1,181 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #F2F2F2;
+        }
+
+        /* Navbar styles */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 60px;
+            z-index: 1;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .cart-icon {
+            font-size: 25px;
+            color: white;
+            margin-right: 10px;
+        }
+
+        /* Cart container styles */
+        .cart-container {
+            margin: 80px auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 800px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cart-title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #007B83;
+            margin-bottom: 20px;
+        }
+
+        .cart-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .cart-table th, .cart-table td {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #E0E0E0;
+        }
+
+        .cart-table th {
+            background-color: #007B83;
+            color: white;
+        }
+
+        .cart-table img {
+            width: 50px;
+            height: auto;
+        }
+
+        .order-summary {
+            padding: 15px;
+            background-color: #E8F5F7;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .order-summary strong {
+            color: #007B83;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
+        }
+
+        .button {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .continue-shopping {
+            background-color: #BDBDBD;
+            color: white;
+        }
+
+        .proceed-to-payment {
+            background-color: #007B83;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="aboutUs.html">About Us</a></li>
+        <form>
+            <ion-icon name="cart-outline" class="cart-icon" onclick="window.location.href='cart.html'"></ion-icon>
+            <input type="text" placeholder="Search" name="search">
+            <a href="Sign-Up.html" style="text-decoration: none;"><button type="button">Sign-Up</button></a>
+            <a href="Log-In.html" style="text-decoration: none;"><button type="button">Log-In</button></a>
+        </form>
+    </ul>
+
+    <div class="cart-container">
+        <div class="cart-title">Keranjang Belanja Anda</div>
+
+        <table class="cart-table">
+            <tr>
+                <th>Gambar</th>
+                <th>Nama Produk</th>
+                <th>Harga</th>
+                <th>Jumlah</th>
+                <th>Sub Total</th>
+                <th>Hapus</th>
+            </tr>
+            <tr>
+                <td><img src="https://via.placeholder.com/50" alt="Product Image"></td>
+                <td>Aroma Kopi</td>
+                <td>Rp 50.000</td>
+                <td>
+                    <button>-</button> 1 <button>+</button>
+                </td>
+                <td>Rp 50.000</td>
+                <td><button>Hapus</button></td>
+            </tr>
+        </table>
+
+        <div class="order-summary">
+            Ringkasan Pesanan<br>
+            Total Harga: Rp 50.000<br>
+            Ongkos Kirim: Rp 10.000<br>
+            <strong>TOTAL KESELURUHAN: RP 60.000</strong>
+        </div>
+
+        <div class="button-container">
+            <button class="button continue-shopping">Lanjut Belanja</button>
+            <button class="button proceed-to-payment">Lanjutkan Ke Pembayaran</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -2,21 +2,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Description</title>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <style>
         body{
-            background-image: url("image/background-image.png");
-            background-size: 100%;
             margin: 0%;
         }
 
         .bar{
             display: flex;
             background-color: #007B83;
-            height: 250px;
         }
 
         .judul{
@@ -24,25 +21,9 @@
             justify-content: center;
             align-items: center;
             width: 100%;
-            font-size: 80px;
-            height: 300px;
+            margin-top: -10px;
+            font-size: 50px;
             color: #FFFFFF;
-        }
-
-        .button {
-            padding: 10px;
-            margin: 20px 20px 20px 20px;
-            background-color: white;
-            color: black;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .button:hover {
-            background-color: #007B83;
-            color: white;
         }
 
         ul {
@@ -79,15 +60,38 @@
             margin-right: 20px;
         }
 
+        .button {
+            top: 20px;
+            right: 20px;
+            background-color: #007B83;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: white;
+            color: #3a4a5e;
+        }
+
         .cart-icon {
             margin-top: 10px;
+            margin-right: 10px;
             font-size: 25px;
             color: white;
             margin-right: 10px;
         }
+
+        .produk-image {
+            width: 400px;
+            height: 500px;
+            border-radius: 30px;
+            cursor: pointer;
+        }
     </style>
 </head>
-    
 <body>
     <ul>
         <li><a href="index.html">Home</a></li>
@@ -126,28 +130,36 @@
             <img src="image/logo.png" alt="logo" style="width: 150px; height: 150px;">
         </div>
         <div class="judul">
-            <h1>bio fresh</h1>
+            <h1>Description</h1>
         </div>
-        <div style="width: 200px;">
-            
+        <div style="display: flex; width: 200px; margin-top: 75px; justify-content: center;">
+            <a href="allProduct.html" style="text-decoration: none;">
+                <button class="button" type="button">Back</button>
+            </a>
         </div>
     </div>
 
-    <div>
-        <h3 style="text-align: center; font-size: 50px;">Freshen Your Space <br> with Natural Scents!</h3>
-    </div>
-
-    <div style="display: flex; justify-content: center; margin-top: 90px;">
-        <div style="align-content: center;">
-            <h3>08123456789</h3>
-        </div>
+    <div style="display: flex; justify-content: center;">
+        <img src="image/8.png" class="produk-image">
         <div>
-            <button class="button">Call Us</button>
+            <h3 style="font-size: 32px;">
+                Bio Fresh - Pengharum Ruangan Aroma Apel
+            </h3>
+            <p style="font-size: 20px;">
+                Segarkan ruangan Anda dengan Bio Fresh Pengharum Ruangan <br>
+                Aroma Apel yang menghadirkan keharuman segar dan alami. <br>
+                Aroma apel yang manis dan renyah membawa nuansa kebun buah yang segar, <br>
+                memberikan kesan ceria dan menyegarkan di setiap sudut ruangan. <br>
+                Cocok digunakan di ruang tamu, dapur, atau ruang kerja, <br>
+                pengharum ini menciptakan atmosfer yang bersih, <br>
+                segar, dan penuh energi positif. Teknologi penyebaran aroma yang efisien <br>
+                memastikan keharuman apel bertahan lama dan menyebar merata, <br>
+                menjadikan ruangan Anda terasa lebih hidup dan nyaman. <br>
+                <br>
+                Harga: Rp 50.000
+            </p>
+            <button type="submit" class="button">Add to Cart</button>
         </div>
-    </div>
-
-    <div style="display: flex; justify-content: center; margin-top: 100px;">
-        <button class="button" onclick="window.location.href='product.html'">See More</button>
     </div>
 </body>
 </html>

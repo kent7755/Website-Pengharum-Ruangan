@@ -3,15 +3,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Arrival</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <style>
         body{
-            background-color: #50A7B2;
+            background-color: #F4F4F9;
             margin: 0%;
         }
 
         .bar{
             display: flex;
+            background-color: #007B83;
         }
 
 
@@ -27,7 +30,7 @@
         }
 
         .button:hover {
-            background-color: rgb(102, 102, 102);
+            background-color: #007B83;
             color: white;
         }
 
@@ -38,6 +41,7 @@
             width: 100%;
             margin-top: -10px;
             font-size: 50px;
+            color: #F4F4F9;
         }
 
         .container {
@@ -45,12 +49,14 @@
             gap: 200px;
             align-items: center;
             justify-content: center;
+            margin-bottom: 120px;
         }
 
         .column {
-            width: 250px;
-            height: 400px;
+            width: 239px;
+            height: 315px;
             background-color: #A5C6BF;
+            border-radius: 30px;
         }
 
         ul {
@@ -66,19 +72,19 @@
         }
 
         li {
-        float: left;
+            float: left;
         }
 
         li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
         }
 
         li a:hover:not(.active) {
-        background-color: #111;
+            background-color: #111;
         }
 
         form {
@@ -89,6 +95,8 @@
 
         h3 {
             font-size: 40px;
+            display: flex;
+            justify-content: center;
         }
 
         .testimonials {
@@ -146,6 +154,35 @@
             line-height: 1.5;
             margin-bottom: 10px;
         }
+
+        .cart-icon {
+            margin-top: 10px;
+            font-size: 25px;
+            color: white;
+            margin-right: 10px;
+        }
+
+        .addToCart-Button {
+            padding: 5px;
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .addToCart-Button:hover {
+            background-color: #007B83;
+            color: white;
+        }
+
+        .produk-image {
+            height: 100%;
+            width: 100%;
+            border-radius: 30px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -157,17 +194,25 @@
 
         <form>
             <div>
+                <ion-icon name="cart-outline" class="cart-icon" onclick="window.location.href='cart.html'"></ion-icon>
+            </div>
+            
+            <div>
                 <div>
                     <input type="text" placeholder="Search" name="search">
                 </div>
                 
-                <div style="margin-top: 10px;">
-                    <a href="Sign-Up.html" style="text-decoration: none;">
-                        <button type="button" style="width: 48.85%;">Sign-Up</button>
-                    </a>
-                    <a href="Log-In.html" style="text-decoration: none;">
-                        <button type="button" style="width: 48.85%;">Log-In</button>
-                    </a>
+                <div style="display: flex; gap: 10px;">
+                    <div style="margin-top: 10px; width: 100%;">
+                        <a href="Sign-Up.html" style="text-decoration: none;">
+                            <button type="button" style="width: 100%;">Sign-Up</button>
+                        </a>
+                    </div>
+                    <div style="margin-top: 10px; width: 100%;">
+                        <a href="Log-In.html" style="text-decoration: none;">
+                            <button type="button" style="width: 100%;">Log-In</button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </form>
@@ -185,29 +230,66 @@
         </div>
     </div>
 
-    <div style="padding-left: 50px;">
-        <h3>New Arrival</h3>
+    <div style="display: flex; color: #007B83; justify-content: center;">
+        <h3>Produk Kami</h3>
     </div>
 
     <div class="container" style="align-items: center; justify-content: center;">
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
+        <div class="column">
+            <img src="image/1.png" class="produk-image" onclick="window.location.href='melonDesc.html'">
+            <p style="text-align: center;">
+                Aroma Melon <br>
+                Rp. 50.000
+            </p>
+            <div style="text-align: center;">
+                <button class="addToCart-Button">Add to Cart</button>
+            </div>
+            
+        </div>
+        <div class="column">
+            <img src="image/2.png" class="produk-image" onclick="window.location.href='anggurDesc.html'">
+            <p style="text-align: center;">
+                Aroma Anggur <br>
+                Rp. 50.000
+            </p>
+            <div style="text-align: center;">
+                <button class="addToCart-Button">Add to Cart</button>
+            </div>
+        </div>
+        <div class="column">
+            <img src="image/3.png" class="produk-image" onclick="window.location.href='seraiDesc.html'">
+            <p style="text-align: center;">
+                Aroma Serai <br>
+                Rp. 50.000
+            </p>
+            <div style="text-align: center;">
+                <button class="addToCart-Button">Add to Cart</button>
+            </div>
+        </div>
+        <div class="column">
+            <img src="image/4.png" class="produk-image" onclick="window.location.href='kopiDesc.html'">
+            <p style="text-align: center;">
+                Aroma Kopi <br>
+                Rp. 50.000
+            </p>
+            <div style="text-align: center;">
+                <button class="addToCart-Button">Add to Cart</button>
+            </div>
+        </div>
     </div>
 
-    <div class="bar" style="justify-content: center; margin-top: 73px;">
+    <div style="display: flex; justify-content: center; margin-top: 73px;">
         <a href="allProduct.html" style="text-decoration: none;">
-            <button class="button button1">See More</button>
+            <button class="button">See More</button>
         </a>
         
         <a href="komposisi.html" style="text-decoration: none;">
-            <button class="button button1">Learn More</button>
+            <button class="button">Learn More</button>
         </a>
     </div>
 
     <div style="padding-left: 50px; margin-top: 200px;">
-        <div>
+        <div style="color: #007B83;">
             <h3>Testimoni</h3>
         </div>
         
@@ -234,7 +316,7 @@
             </div>
         </div>
 
-        <div class="bar" style="justify-content: center; margin-top: 70px; margin-bottom: 70px;">
+        <div style="display: flex; justify-content: center; margin-top: 70px; margin-bottom: 70px;">
             <a href="testimoni.html" style="text-decoration: none;">
                 <button class="button button1">See More</button>
             </a>

@@ -3,15 +3,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <style>
         body{
-            background-color: #50A7B2;
             margin: 0%;
+            background-color: #F4F4F9;
         }
 
         .bar{
             display: flex;
+            background-color: #007B83;
         }
 
         .button {
@@ -37,6 +40,7 @@
             width: 100%;
             margin-top: -10px;
             font-size: 50px;
+            color: white;
         }
 
         .container {
@@ -44,12 +48,14 @@
             gap: 200px;
             align-items: center;
             justify-content: center;
+            margin-bottom: 120px;
         }
 
         .column {
-            width: 250px;
-            height: 400px;
+            width: 239px;
+            height: 315px;
             background-color: #A5C6BF;
+            border-radius: 30px;
         }
 
         ul {
@@ -94,6 +100,35 @@
             margin-top: 200px;
             margin-bottom: 200px;
         }
+
+        .cart-icon {
+            margin-top: 10px;
+            font-size: 25px;
+            color: white;
+            margin-right: 10px;
+        }
+
+        .addToCart-Button {
+            padding: 5px;
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .addToCart-Button:hover {
+            background-color: #007B83;
+            color: white;
+        }
+
+        .produk-image {
+            height: 100%;
+            width: 100%;
+            border-radius: 30px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -105,17 +140,25 @@
 
         <form>
             <div>
+                <ion-icon name="cart-outline" class="cart-icon" onclick="window.location.href='cart.html'"></ion-icon>
+            </div>
+            
+            <div>
                 <div>
                     <input type="text" placeholder="Search" name="search">
                 </div>
                 
-                <div style="margin-top: 10px;">
-                    <a href="Sign-Up.html" style="text-decoration: none;">
-                        <button type="button" style="width: 48.85%;">Sign-Up</button>
-                    </a>
-                    <a href="Log-In.html" style="text-decoration: none;">
-                        <button type="button" style="width: 48.85%;">Log-In</button>
-                    </a>
+                <div style="display: flex; gap: 10px;">
+                    <div style="margin-top: 10px; width: 100%;">
+                        <a href="Sign-Up.html" style="text-decoration: none;">
+                            <button type="button" style="width: 100%;">Sign-Up</button>
+                        </a>
+                    </div>
+                    <div style="margin-top: 10px; width: 100%;">
+                        <a href="Log-In.html" style="text-decoration: none;">
+                            <button type="button" style="width: 100%;">Log-In</button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </form>
@@ -141,10 +184,47 @@
         </div>
     
         <div class="container" style="align-items: center; justify-content: center;">
-            <div class="column"></div>
-            <div class="column"></div>
-            <div class="column"></div>
-            <div class="column"></div>
+            <div class="column">
+                <img src="image/5.png" class="produk-image" onclick="window.location.href='greenteaDesc.html'">
+                <p style="text-align: center;">
+                    Aroma Grenn Tea <br>
+                    Rp. 50.000
+                </p>
+                <div style="text-align: center;">
+                    <button class="addToCart-Button">Add to Cart</button>
+                </div>
+                
+            </div>
+            <div class="column">
+                <img src="image/6.png" class="produk-image" onclick="window.location.href='jasminDesc.html'">
+                <p style="text-align: center;">
+                    Aroma Jasmine <br>
+                    Rp. 50.000
+                </p>
+                <div style="text-align: center;">
+                    <button class="addToCart-Button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="column">
+                <img src="image/7.png" class="produk-image" onclick="window.location.href='vanillaDesc.html'">
+                <p style="text-align: center;">
+                    Aroma Vanilla <br>
+                    Rp. 50.000
+                </p>
+                <div style="text-align: center;">
+                    <button class="addToCart-Button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="column">
+                <img src="image/8.png" class="produk-image" onclick="window.location.href='apelDesc.html'">
+                <p style="text-align: center;">
+                    Aroma Apel <br>
+                    Rp. 50.000
+                </p>
+                <div style="text-align: center;">
+                    <button class="addToCart-Button">Add to Cart</button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -154,10 +234,47 @@
         </div>
     
         <div class="container" style="align-items: center; justify-content: center;">
-            <div class="column"></div>
-            <div class="column"></div>
-            <div class="column"></div>
-            <div class="column"></div>
+            <div class="column">
+                <img src="image/b1.png" class="produk-image" onclick="window.location.href='bundAnggurDesc.html'">
+                <p style="text-align: center;">
+                    Bundling Aroma Anggur <br>
+                    Rp. 250.000
+                </p>
+                <div style="text-align: center;">
+                    <button class="addToCart-Button">Add to Cart</button>
+                </div>
+                
+            </div>
+            <div class="column">
+                <img src="image/b2.png" class="produk-image" onclick="window.location.href='bundKopiDesc.html'">
+                <p style="text-align: center;">
+                    Bundling Aroma Kopi <br>
+                    Rp. 250.000
+                </p>
+                <div style="text-align: center;">
+                    <button class="addToCart-Button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="column">
+                <img src="image/b3.png" class="produk-image" onclick="window.location.href='bundMelonDesc.html'">
+                <p style="text-align: center;">
+                    Bundling Aroma Melon <br>
+                    Rp. 250.000
+                </p>
+                <div style="text-align: center;">
+                    <button class="addToCart-Button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="column">
+                <img src="image/b4.png" class="produk-image" onclick="window.location.href='bundVanillaDesc.html'">
+                <p style="text-align: center;">
+                    Bundling Aroma Vanilla <br>
+                    Rp. 250.000
+                </p>
+                <div style="text-align: center;">
+                    <button class="addToCart-Button">Add to Cart</button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -167,10 +284,47 @@
         </div>
     
         <div class="container" style="align-items: center; justify-content: center;">
-            <div class="column"></div>
-            <div class="column"></div>
-            <div class="column"></div>
-            <div class="column"></div>
+            <div class="column">
+                <img src="image/1.png" class="produk-image" onclick="window.location.href='melonDesc.html'">
+                <p style="text-align: center;">
+                    Aroma Melon<br>
+                    Rp. 50.000
+                </p>
+                <div style="text-align: center;">
+                    <button class="addToCart-Button">Add to Cart</button>
+                </div>
+                
+            </div>
+            <div class="column">
+                <img src="image/4.png" class="produk-image" onclick="window.location.href='kopiDesc.html'">
+                <p style="text-align: center;">
+                    Aroma Kopi <br>
+                    Rp. 50.000
+                </p>
+                <div style="text-align: center;">
+                    <button class="addToCart-Button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="column">
+                <img src="image/5.png" class="produk-image" onclick="window.location.href='greenteaDesc.html'">
+                <p style="text-align: center;">
+                    Aroma Green Tea <br>
+                    Rp. 50.000
+                </p>
+                <div style="text-align: center;">
+                    <button class="addToCart-Button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="column">
+                <img src="image/8.png" class="produk-image" onclick="window.location.href='apelDesc.html'">
+                <p style="text-align: center;">
+                    Aroma Apel <br>
+                    Rp. 50.000
+                </p>
+                <div style="text-align: center;">
+                    <button class="addToCart-Button">Add to Cart</button>
+                </div>
+            </div>
         </div>
     </div>
 </body>

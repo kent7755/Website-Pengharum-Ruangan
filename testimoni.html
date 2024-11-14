@@ -3,14 +3,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testimoni</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <style>
         body{
-            background-color: #50A7B2;
+            background-color: #F4F4F9;
             margin: 0%;
         }
 
         .bar{
+            background-color: 007B83;
             display: flex;
         }
 
@@ -38,6 +41,7 @@
             width: 100%;
             margin-top: -10px;
             font-size: 50px;
+            color: white;
         }
 
         .container {
@@ -125,6 +129,13 @@
             font-size: 30px;
             color: #555;
         }
+
+        .cart-icon {
+            margin-top: 10px;
+            font-size: 25px;
+            color: white;
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
@@ -136,17 +147,25 @@
 
         <form>
             <div>
+                <ion-icon name="cart-outline" class="cart-icon" onclick="window.location.href='cart.html'"></ion-icon>
+            </div>
+            
+            <div>
                 <div>
                     <input type="text" placeholder="Search" name="search">
                 </div>
                 
-                <div style="margin-top: 10px;">
-                    <a href="Sign-Up.html" style="text-decoration: none;">
-                        <button type="button" style="width: 48.85%;">Sign-Up</button>
-                    </a>
-                    <a href="Log-In.html" style="text-decoration: none;">
-                        <button type="button" style="width: 48.85%;">Log-In</button>
-                    </a>
+                <div style="display: flex; gap: 10px;">
+                    <div style="margin-top: 10px; width: 100%;">
+                        <a href="Sign-Up.html" style="text-decoration: none;">
+                            <button type="button" style="width: 100%;">Sign-Up</button>
+                        </a>
+                    </div>
+                    <div style="margin-top: 10px; width: 100%;">
+                        <a href="Log-In.html" style="text-decoration: none;">
+                            <button type="button" style="width: 100%;">Log-In</button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </form>
