@@ -2,13 +2,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Description</title>
+    <title>Pembayaran</title>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <style>
         body{
             margin: 0%;
+            background-color: #F4F4F9;
         }
 
         .bar{
@@ -39,19 +40,19 @@
         }
 
         li {
-        float: left;
+            float: left;
         }
 
         li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
         }
 
         li a:hover:not(.active) {
-        background-color: #111;
+            background-color: #111;
         }
 
         form {
@@ -60,9 +61,14 @@
             margin-right: 20px;
         }
 
+        .cart-icon {
+            margin-top: 10px;
+            font-size: 25px;
+            color: white;
+            margin-right: 10px;
+        }
+
         .button {
-            top: 20px;
-            right: 20px;
             background-color: #007B83;
             color: white;
             border: none;
@@ -76,19 +82,73 @@
             color: #3a4a5e;
         }
 
-        .cart-icon {
-            margin-top: 10px;
-            margin-right: 10px;
-            font-size: 25px;
-            color: white;
-            margin-right: 10px;
+        .button-container {
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
         }
 
-        .produk-image {
-            width: 400px;
-            height: 500px;
-            border-radius: 30px;
-            cursor: pointer;
+        .continue-shopping {
+            background-color: #BDBDBD;
+            color: white;
+            width: 100%;
+        }
+
+        .proceed-to-payment {
+            background-color: #007B83;
+            color: white;
+            width: 100%;
+        }
+
+        .cart-container {
+            margin: 50px auto;
+            padding: 20px;
+            width: 100%;
+            max-width: 1000px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cart-title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            color: #007B83;
+            margin-bottom: 20px;
+        }
+
+        .cart-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .cart-table th, .cart-table td {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #E0E0E0;
+        }
+
+        .cart-table th {
+            background-color: #007B83;
+            color: white;
+        }
+
+        .cart-table img {
+            width: 50px;
+        }
+
+        .order-summary {
+            padding: 15px;
+            background-color: #E8F5F7;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 25px;
+        }
+        h4 {
+            font-size: 24px;
         }
     </style>
 </head>
@@ -130,35 +190,37 @@
             <img src="image/logo.png" alt="logo" style="width: 150px; height: 150px;">
         </div>
         <div class="judul">
-            <h1>Description</h1>
+            <h1>Pembayaran</h1>
         </div>
-        <div style="display: flex; width: 200px; margin-top: 75px; justify-content: center;">
-            <a href="allProduct.html" style="text-decoration: none;">
-                <button class="button" type="button">Back</button>
-            </a>
+        <div style="width: 200px; margin-top: 25px;">
+
         </div>
     </div>
 
-    <div style="display: flex; justify-content: center;">
-        <img src="image/8.png" class="produk-image">
-        <div>
-            <h3 style="font-size: 32px;">
-                Bio Fresh - Pengharum Ruangan Aroma Apel
-            </h3>
-            <p style="font-size: 20px;">
-                Segarkan ruangan Anda dengan Bio Fresh Pengharum Ruangan <br>
-                Aroma Apel yang menghadirkan keharuman segar dan alami. <br>
-                Aroma apel yang manis dan renyah membawa nuansa kebun buah yang segar, <br>
-                memberikan kesan ceria dan menyegarkan di setiap sudut ruangan. <br>
-                Cocok digunakan di ruang tamu, dapur, atau ruang kerja, <br>
-                pengharum ini menciptakan atmosfer yang bersih, <br>
-                segar, dan penuh energi positif. Teknologi penyebaran aroma yang efisien <br>
-                memastikan keharuman apel bertahan lama dan menyebar merata, <br>
-                menjadikan ruangan Anda terasa lebih hidup dan nyaman. <br>
-                <br>
-                Harga: Rp 100.000
+    <div class="cart-container">
+        <div class="cart-title">
+            Periksa kembali pesanan Anda dan selesaikan pembayaran
+        </div>
+
+        <div class="order-summary">
+            <p>
+                Ringkasan Pesanan<br>
+                Total Harga: Rp 500.000<br>
+                Ongkos Kirim: Rp 10.000<br>
+                <strong>TOTAL KESELURUHAN: RP 510.000</strong>
             </p>
-            <button type="submit" class="button">Add to Cart</button>
+        </div>
+        
+        <div style="margin-bottom: 20px;">
+            <p>Pilih Metode Pembayaran</p>
+            <select id="method" name="method" style="width: 20%; border-radius: 30px; padding: 2px;">
+                <option value="transfer">Transfer</option>
+                <option value="cod">Cas On Delivery</option>
+            </select>
+        </div>
+
+        <div class="button-container">
+            <button class="button proceed-to-payment">Konfirmasi Pembayaran</button>
         </div>
     </div>
 </body>
