@@ -66,21 +66,9 @@
             color: #007B83;
         }
 
-        hr {
-            border: none;
-            border-top: 2px solid black;
-            margin-left: 300px;
-            margin-right: 300px;
-        }
-
-        .news-title {
-            background-color: #007B83;
-            margin-left: 300px;
-            margin-right: 300px;
-            color: white;
-            border-radius: 5px;
-            align-content: center;
-            padding-bottom: 20px;
+        p {
+            text-align: center;
+            font-size: 25px;
         }
 
         .button {
@@ -147,19 +135,23 @@
         <div class="judul">
             <h1>News</h1>
         </div>
-        <div style="width: 200px; margin-top: 25px;">
-
+        <div style="display: flex; width: 200px; margin-top: 75px; justify-content: center;">
+            <a href="news.html" style="text-decoration: none;">
+                <button class="button" type="button">Back</button>
+            </a>
         </div>
     </div>
 
     <div>
-        <h2>2024</h2>
-        <hr>
-    </div>
-
-    <div class="news-title">
-        <h3>Web Pertama Kami di Buat</h3>
-        <button class="button" type="button" onclick="window.location.href='detailNews.html'">Baca Lebih Lanjut</button>
+        <h2>
+            Web Pertama Kami di Buat
+        </h2>
+        <p>
+            Web kami pertama kalinya dibuat pada tanggal 11 Oktober 2024. <br>
+            Web dibuat dengan beranggotakan 2 orang. <br>
+            Tujuan pembuatan web ini adalah agar dapat memdudahkan <br>
+            orang-orang yang ingin membeli produk bio fresh.
+        </p>
     </div>
 </body>
 </html>
